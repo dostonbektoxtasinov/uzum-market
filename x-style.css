@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.advertisement-container{
+    position: relative;
+    top: 5em;
+}
+#x{
+    display: block;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 100px;
+    background-color: #F4F5F5;
+    float: right;
+    position: relative;
+    right: 30px;
+    top: -30px;
+}
+.x{
+    padding: 2px;
+    margin-right: 5px;
+}
+.yana{
+    display: flex;
+    align-items: center;
+    /* height: 100em; */
+}
+.vertical-text{
+    display: flex;
+    padding: 8px 0;
+}
+.box-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 22px;
+}
+.box-item_hover:hover{
+    background-color: #F1F1F2;
+    width: 250px;
+    transition: 0.20s;
+    border-radius: 5px;
+    color: #464bd0;
+}
+.logo-img{
+    margin: 0 10px 0 0;
+}
+#Kimyoviy{
+    position: relative;
+    top: -10px;
+}
+.vertical-line{
+    width: 1px;
+    height: 53em;
+    margin: 0 1em;
+    background-color: #909090;
+}
+/* about */
+.Elektronika-about > h3{
+    display: flex;
+    margin: 0 0 20px 50px;
+}
+.Elektronika-about > h3:hover{
+    color: #464bd0;
+}
+
+.Elektronika-about_right{
+    width: 30px;
+    height: 30px;
+    color: #000;
+}
+.Elektronika-about_item{
+    display: flex;
+    line-height: 30px;
+    padding: 0 0 140px 50px;
+}
+.Elektronika-about_items_second{
+    padding: 0 100px;
+}
+.hover:hover{
+    color: #464bd0;
+}
+.Elektronika-about_items > div > p{
+    color: #505050;
+    font-size: 13px;
+}
+.Elektronika-about_items > div > p:hover{
+    color: #464bd0;
+    cursor: pointer;
+}
+.bottom-icon{
+    width: 20px;
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+}
+#yana2{
+    display: none;
+}
+.hover{
+    color: #505050;
+    font-size: 13px;
+}
+#yana3{
+    display: none;
+}

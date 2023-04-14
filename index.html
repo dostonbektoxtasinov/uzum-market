@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Onlain shopping</title>
+    <script src="./app.js"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <div class="big-box">
+        <header class="main-header">
+            <div class="location-box">
+                <img src="./img/icons/location-dot.svg" class="location-box_location" alt="location">
+                <span>
+                    <h5>
+                        <span class="location-box_city">
+                            Shahar:
+                        </span>
+                        <u style="color: #606060;">
+                            Toshkent
+                        </u>
+                    </h5>
+                    <h5>Topshirish punktlari</h5>
+                </span>
+            </div>
+            <div class="deliver-box">
+                <p>
+                    Buyurtmangizni 1 kunda bepul yetkazib beramiz.!
+                </p>
+            </div>
+            <div class="apply-language-box">
+                <h5>Savol-javoblar</h5>
+                <h5>Buyurtmalarim</h5>
+                <div class="flag-box_js" onclick="myFlag()">
+                    <img src="./img/bayroqlar/download.png" class="bayroq" id="uzb-bayroq_js" alt="bayroqlar">
+                    <h5>O'zbekcha</h5>
+                </div>
+            </div>
+        </header>
+        <div id="flag-box_js_rus">
+            <img src="./img/bayroqlar/download.jpg" id="bayroq" alt="bayroqlar">
+            <h5 id="rus">Русский</h5>
+        </div>
+        <div class="container" id="container">
+            <nav class="search-nav">
+                <div class="search-nav_logo">
+                    <img src="./img/logo/download.svg" alt="logo">
+                </div>
+                <div class="search-nav_box" onclick="bottomIcon()" onclick="x()">
+                    <span class="search-nav_katalog">
+                        <img id="search-nav_box_img" src="./img/icons/katalog icon.png" class="search-nav_katalog-img"
+                            width="20px" height="20px" alt="">
+                        <svg id="search-nav_box_x" data-v-45337954="" width="24" height="24" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" class="close-icon-catalog">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.28033 5.21967C5.98744 4.92678 5.51256 4.92678 5.21967 5.21967C4.92678 5.51256 4.92678 5.98744 5.21967 6.28033L10.9393 12L5.21967 17.7197C4.92678 18.0126 4.92678 18.4874 5.21967 18.7803C5.51256 19.0732 5.98744 19.0732 6.28033 18.7803L12 13.0607L17.7197 18.7803C18.0126 19.0732 18.4874 19.0732 18.7803 18.7803C19.0732 18.4874 19.0732 18.0126 18.7803 17.7197L13.0607 12L18.7803 6.28033C19.0732 5.98744 19.0732 5.51256 18.7803 5.21967C18.4874 4.92678 18.0126 4.92678 17.7197 5.21967L12 10.9393L6.28033 5.21967Z">
+                            </path>
+                        </svg>
+                        <p>
+                            Katalog
+                        </p>
+                    </span>
+                    <input type="text" class="search-nav_input" placeholder="Mahsulotlar va turkumlar izlash">
+                    <button type="button" class="search-box">
+                        <a href="#"><img src="./img/icons/search.png" class="search" alt="search icon"></a>
+                    </button>
+                </div>
+                <div class="checked-box">
+                    <h3>
+                        <img src="./img/icons/person.png" class="checked-box_icon" alt="person-icon">
+                        Kirish
+                    </h3>
+                    <h3>
+                        <img src="./img/icons/love.png" class="checked-box_icon" alt="love-icon">
+                        Saralangan
+                    </h3>
+                    <h3>
+                        <img src="./img/icons/basket.png" class="checked-box_icon basket" alt="basket-icon">
+                        Savat
+                    </h3>
+                </div>
+            </nav>
+            <!-- <span onclick="menu()" id="menu">|||</span> -->
+            <nav class="menu-nav" id="menu_nav">
+                <ul>
+                    <li>
+                        <a href="#">Elektronika</a>
+                        <a href="#maishiy-texnika">Maishiy texnika</a>
+                        <a href="#kiyim">Kiyim</a>
+                        <a href="#">Poyabzallar</a>
+                        <a href="#">Aksessuarlar</a>
+                        <a href="#gozallik">Go'zallik</a>
+                        <a href="#">Salomatlik</a>
+                        <a href="#uy-rozgor">Uy-ro'zg'or buyumlari</a>
+                        <a href="#">Qurish va ta'mirlash</a>
+                        <a href="#">Avtotovarlar</a>
+                        <a href="#">Bolalar tasvirlari</a>
+                        <a href="./X-onclick.html">
+                            Yana
+                            <img src="./img/icons/bottom-arrow-icon-11.jpg" class="bottom-icon" id="menu_nav_yana"
+                                alt="icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- todo X rasm -->
+            <!-- <a href="#" onclick="x()"> -->
+            <svg id="x" data-v-45337954="" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                class="close-icon-catalog">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.28033 5.21967C5.98744 4.92678 5.51256 4.92678 5.21967 5.21967C4.92678 5.51256 4.92678 5.98744 5.21967 6.28033L10.9393 12L5.21967 17.7197C4.92678 18.0126 4.92678 18.4874 5.21967 18.7803C5.51256 19.0732 5.98744 19.0732 6.28033 18.7803L12 13.0607L17.7197 18.7803C18.0126 19.0732 18.4874 19.0732 18.7803 18.7803C19.0732 18.4874 19.0732 18.0126 18.7803 17.7197L13.0607 12L18.7803 6.28033C19.0732 5.98744 19.0732 5.51256 18.7803 5.21967C18.4874 4.92678 18.0126 4.92678 17.7197 5.21967L12 10.9393L6.28033 5.21967Z">
+                </path>
+            </svg>
+            <!-- </a> -->
+            <!--todo X rasm -->
+            <div class="advertisement-container" id="advertisement-container">
+                <div class="advertisement_img">
+                    <img onclick="advertisementLeft()" src="./img/icons/left-arrow.png" class="left-icon"
+                        alt="left-icon">
+                    <a href="#" id="advertisementBox">
+                        <img id="advertisementFirst"
+                            src="https://images.uzum.uz/cd77kpj5a95unf132jh0/main_page_banner.jpg" alt="first">
+                        <img id="advertisementSecond" src="./0TvEes.jpg" alt="second">
+                    </a>
+                    <img onclick="advertisementRight()" src="./img/icons/arrow-point-to-right.png" class="right-icon"
+                        alt="right-icon">
+                </div>
+            <!-- <div class="advertisement_img">
+                    <a href="#" id="advertisementBox">
+                        <img id="advertisementSecond" src="https://images.uzum.uz/cd2mhg70tgqvlm57vtrg/main_page_banner.jpg" alt="second">
+                    </a>
+                </div>
+                <div class="advertisement_img">
+                    <a href="#" id="advertisementBox">
+                        <img id="advertisementThrid" src="https://images.uzum.uz/cd21jpv0tgqvlm57v540/main_page_banner.jpg" alt="thrid">
+                    </a>
+                </div>
+                <div class="advertisement_img">
+                    <a href="#" id="advertisementBox">
+                        <img id="advertisementFourth" src="https://images.uzum.uz/cd21igb5a95unf124kig/main_page_banner.jpg" alt="fourth">
+                    </a>
+                </div>
+                <div class="advertisement_img">
+                    <a href="#" id="advertisementBox">
+                        <img id="advertisementFifth" src="https://images.uzum.uz/cd77o03b3ho5lmuqvifg/main_page_banner.jpg" alt="fifth">
+                    </a>
+                </div>
+            </div> -->
+
+            <div class="center-container-items center-container-items_margin-top" id="maishiy-texnika">
+                <!--! first rowspan  -->
+                <div class="container-item">
+                    <img src="./image/tefal.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" onclick="containerItemLove()" class="container-item_love"
+                        id="container-item_love">
+                    <img src="./img/icons/download (2).png" id="container-item_red-love" alt="">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Elektro choynak Scarlett SC-<br>EK21S51</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/earphone.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Mikrofonli S9 simsiz <br> minigarnituralar, Bluetooth 5.1</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(2 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">93&nbsp;000</del>
+                    <h4>76&nbsp;300so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/magnit zaryadchik.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Magnit zaryadlovchi kabel<br>Floveme 2A, Lightning, Type-C,...</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">15&nbsp;000</del>
+                    <h4>6&nbsp;300so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item container-item_block">
+                    <img src="./image/batareyalar.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Batareyalar Duracell oddiy AA<br>2X10CRD MON, 2 dona</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">14&nbsp;000</del>
+                    <h4>12&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+                <div class="container-item">
+                    <img src="./image/smart watch.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Smart watch</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!--! second rowspan  -->
+
+            <div class="center-container-items" id="kiyim">
+
+                <div class="container-item">
+                    <img src="./image/futbolka.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Erkaklar uchun futbolkalar <br> to'plami</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/fermuli jemper.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun fermuli jemper</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/qora va oq katakli koylak.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Qo'ra va oq katakli ko'ylak</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">14&nbsp;000</del>
+                    <h4>12&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/V-bo'ynli jemper.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>V-bo'ynli jemper</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(2 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">90&nbsp;000</del>
+                    <h4>23&nbsp;200so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/kesuv bilan koylak.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Kesuv bilan koylak</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">15&nbsp;000</del>
+                    <h4>6&nbsp;300so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!--! thrid rowspan  -->
+
+            <div class="center-container-items">
+
+                <div class="container-item">
+                    <img src="./image/ayollar uchun soyabon.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun soyabon</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/Qamish soyabon kamalak, gumbazi 120 sm, 16dona.jpg" alt="img"
+                        class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Qamish soyabon kamalak,<br> gumbazi 120 sm</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/quyoshdan saqlovchi koz oynak.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Quyoshdan saqlovchi <br> erkaklar ko'z oynak</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">14&nbsp;000</del>
+                    <h4>12&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/ayollar kozoynak 2.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun ko'z oynaklar <br> to'plami</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(2 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">90&nbsp;000</del>
+                    <h4>23&nbsp;200so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/ayollar uchun koz oynak.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun ko'z oynak</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">15&nbsp;000</del>
+                    <h4>6&nbsp;300so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!--! fourth rowspan  -->
+
+            <div class="center-container-items" id="gozallik">
+
+                <div class="container-item">
+                    <img src="./image/jimgalak sochlar uchun.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Jimgalak sochlar uchun</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/lab boyogi.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun lab bo'yog'i</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/pinsep.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun pinsep</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">14&nbsp;000</del>
+                    <h4>12&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/Quloq manjetlar.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun sepo'chkalar</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(2 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">90&nbsp;000</del>
+                    <h4>23&nbsp;200so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/Salyangoz.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun hid taratuvchi</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">15&nbsp;000</del>
+                    <h4>6&nbsp;300so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!--! fifth rowspan  -->
+
+            <div class="center-container-items">
+
+                <div class="container-item">
+                    <img src="./image/Zargarlik-qutisi.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun maxsus <br> zargarlik qutisi</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/soch boyogi.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun maxsus <br> soch bo'yog'</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/maskara.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Maskara</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">14&nbsp;000</del>
+                    <h4>12&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/earphone.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Maxsus earphone</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(2 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">90&nbsp;000</del>
+                    <h4>23&nbsp;200so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/uch rangli asos.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun maxsus</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">15&nbsp;000</del>
+                    <h4>6&nbsp;300so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!--! sixth rowspan  -->
+
+            <div class="center-container-items" id="uy-rozgor">
+
+                <div class="container-item">
+                    <img src="./image/Knife.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Oshxona uchun maxsus <br> pichoqlar to'plami</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/pichoq va qaychi otkirlovchi.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Pichoq va qaychi otkirlovchi</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">230&nbsp;000</del>
+                    <h4>169&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/qirgich.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Qirg'ich</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">14&nbsp;000</del>
+                    <h4>12&nbsp;000so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/shisha qozon.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Oshxona uchun maxsus <br> qozon</p>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(2 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">90&nbsp;000</del>
+                    <h4>23&nbsp;200so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+
+                <div class="container-item">
+                    <img src="./image/uch rangli asos.jpg" alt="img" class="container-item_img">
+                    <img src="./img/icons/love.png" alt="love" class="container-item_love">
+                    <span class="container-item_span-promo">Promo</span>
+                    <p>Ayollar uchun maxsus</p>
+                    <br>
+                    <span class="container-item_changed-color">
+                        <img src="./img/icons/star-icon.webp" class="star-icon" alt="star icon">
+                        5.0(1 baho)
+                    </span>
+                    <br>
+                    <br>
+                    <del class="container-item_changed-color">15&nbsp;000</del>
+                    <h4>6&nbsp;300so'm</h4>
+                    <svg class="container-item_svg-basket" data-v-98fe6e7e="" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  add-cart-icon">
+                        <path
+                            d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                            fill="black"></path>
+                        <path
+                            d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <footer class="footer-box">
+                <div class="internet-box">
+                    <h5>
+                        Uzum ijtimoiy tarmoqlarda:
+                    </h5>
+                    <a href="#">
+                        <img src="./img/logo/instagram.jpg" class="internet-logo" alt="instagram">
+                    </a>
+                    <a href="#">
+                        <img src="./img/logo/telegram.png" class="internet-logo" alt="instagram">
+                    </a>
+                    <a href="#">
+                        <img src="./img/logo/youtube.jpg" class="internet-logo" alt="instagram">
+
+                    </a>
+                    <a href="#">
+                        <img src="./img/logo/facebook.png" class="internet-logo" alt="instagram">
+                    </a>
+                </div>
+                <div class="about-we">
+                    <a href="#" class="chenged-color-grey">Biz haqimizda</a>
+                    <a href="#" class="chenged-color">Topshirish punkitlari</a>
+                </div>
+                <div class="connect-box">
+                    <a href="#" class="chenged-color-grey">Foydalanuvchilarga</a>
+                    <a href="#" class="chenged-color">Biz vilan bog'lanish <br> Savol-Javob</a>
+                </div>
+                <div class="biznes-box">
+                    <a href="#" class="chenged-color-grey">Tadbirkorlarga</a>
+                    <a href="#" class="chenged-color">Sotuvchi kabinetiga kirish</a>
+                </div>
+            </footer>
+            <div class="app-box">
+                <h5 class="chenged-color">
+                    Ilovani yuklab olish:
+                </h5>
+                <a href="#">
+                    <svg class="footer_apple-playmarket_icon" width='24' height='24' viewBox='0 0 24 24' fill='none'
+                        xmlns='http://www.w3.org/2000/svg'>
+                        <path
+                            d='M14.961 3.46878C15.6409 2.53501 16.1022 1.28122 15.9805 0C14.9853 0.0543415 13.7709 0.720988 13.0678 1.65549C12.4364 2.45575 11.8777 3.76203 12.0233 4.98954C13.1405 5.09596 14.2566 4.37635 14.961 3.46878Z'
+                            fill='black' />
+                        <path
+                            d='M16.3801 5.00736C14.559 4.8975 13.0106 6.05404 12.141 6.05404C11.2709 6.05404 9.93914 5.06272 8.49877 5.08943C6.62405 5.11732 4.88452 6.19078 3.93317 7.89808C1.97642 11.3135 3.41678 16.3798 5.31962 19.1615C6.24369 20.5377 7.35733 22.053 8.82474 21.9986C10.2112 21.9435 10.7546 21.0894 12.4399 21.0894C14.124 21.0894 14.6135 21.9986 16.0811 21.971C17.6031 21.9435 18.5546 20.5942 19.4787 19.2166C20.5387 17.6478 20.9727 16.133 21 16.0499C20.9727 16.0223 18.0652 14.8928 18.0382 11.5057C18.0108 8.66968 20.321 7.3207 20.4297 7.23704C19.1251 5.28304 17.0867 5.06272 16.3801 5.00736Z'
+                            fill='black' />
+                    </svg>
+                    AppStore
+                </a>
+                <a href="#">
+                    <svg class="footer_apple-playmarket_icon" width='24' height='24' viewBox='0 0 24 24' fill='none'
+                        xmlns='http://www.w3.org/2000/svg'>
+                        <path
+                            d='M2.46656 0.400879C2.18662 0.680813 2 1.14737 2 1.70724V22.3291C2 22.8889 2.18662 23.3555 2.46656 23.6354L2.55987 23.7288L14.1305 12.1581L2.46656 0.400879Z'
+                            fill='url(#paint0_linear)' />
+                        <path
+                            d='M17.9563 15.9831L14.1305 12.1574L17.9563 8.23828L22.5285 10.851C23.8349 11.5975 23.8349 12.8105 22.5285 13.557L17.9563 15.9831Z'
+                            fill='url(#paint1_linear)' />
+                        <path
+                            d='M17.9563 15.9831L14.1305 12.1573L2.46655 23.6347C2.93311 24.1012 3.58629 24.1012 4.42609 23.728L17.9563 15.9831Z'
+                            fill='url(#paint2_linear)' />
+                        <path
+                            d='M17.9563 8.23822L4.33278 0.306739C3.58629 -0.159819 2.8398 -0.0665074 2.46655 0.40005L14.1305 12.1573L17.9563 8.23822Z'
+                            fill='url(#paint3_linear)' />
+                        <defs>
+                            <linearGradient id='paint0_linear' x1='13.036' y1='1.49188' x2='-2.62386' y2='17.1518'
+                                gradientUnits='userSpaceOnUse'>
+                                <stop stop-color='#00A0FF' />
+                                <stop offset='0.00657445' stop-color='#00A1FF' />
+                                <stop offset='0.2601' stop-color='#00BEFF' />
+                                <stop offset='0.5122' stop-color='#00D2FF' />
+                                <stop offset='0.7604' stop-color='#00DFFF' />
+                                <stop offset='1' stop-color='#00E3FF' />
+                            </linearGradient>
+                            <linearGradient id='paint1_linear' x1='24.2658' y1='12.0277' x2='1.68731' y2='12.0277'
+                                gradientUnits='userSpaceOnUse'>
+                                <stop stop-color='#FFE000' />
+                                <stop offset='0.4087' stop-color='#FFBD00' />
+                                <stop offset='0.7754' stop-color='#FFA500' />
+                                <stop offset='1' stop-color='#FF9C00' />
+                            </linearGradient>
+                            <linearGradient id='paint2_linear' x1='15.8609' y1='14.1688' x2='-5.37525' y2='35.4049'
+                                gradientUnits='userSpaceOnUse'>
+                                <stop stop-color='#FF3A44' />
+                                <stop offset='1' stop-color='#C31162' />
+                            </linearGradient>
+                            <linearGradient id='paint3_linear' x1='-0.496367' y1='-6.47169' x2='8.98651' y2='3.01109'
+                                gradientUnits='userSpaceOnUse'>
+                                <stop stop-color='#32A071' />
+                                <stop offset='0.0685' stop-color='#2DA771' />
+                                <stop offset='0.4762' stop-color='#15CF74' />
+                                <stop offset='0.8009' stop-color='#06E775' />
+                                <stop offset='1' stop-color='#00F076' />
+                            </linearGradient>
+                        </defs>
+                    </svg> Google play
+                </a>
+            </div>
+            <hr>
+            <div class="footer-end">
+                <div class="as">
+                    <p class="chenged-color">
+                        2022&copy;MCHJ << ZENIT TRCHNOLOGII>> . STIR 309376127. Barcha huquqlar himoyalangan.
+                    </p>
+                    <p class="chenged-color">
+                        Maxfiylik kelishuvi &nbsp;&nbsp;&nbsp;Foydalanuchi kelishuvi
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
